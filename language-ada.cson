@@ -20,7 +20,7 @@
       end case;
     '''
   "elsif … then":
-    prefix: "elsi"
+    prefix: "eli"
     body: '''
       elsif $1 then
       	$0
@@ -35,10 +35,8 @@
   "function … end":
     prefix: "fun"
     body: '''
-      function ${1:name}
-      (  $2)
-      return $3 is
-      	$4
+      function ${1:name} return $2 is
+      	$3
       begin -- $1
       	$0
       end $1;
@@ -65,10 +63,10 @@
       end $1;
     '''
   "package … is …":
-    prefix: "pack"
+    prefix: "pne"
     body: "package $1 is $0"
   "package body … end":
-    prefix: "packa"
+    prefix: "pbo"
     body: '''
       package body ${1:name} is
       	$0
@@ -79,9 +77,9 @@
     body: '''
       procedure ${1:Procedure} is
       	$2
-      begin -- $1
+      begin -- ${1/([a-zA-Z0-9_]*).*$/$1/}
       	$0
-      end $1;
+      end ${1/([a-zA-Z0-9_]*).*$/$1/};
     '''
   "record … end record":
     prefix: "rec"
@@ -96,9 +94,6 @@
   "type … is …":
     prefix: "ty"
     body: "type $1 is $0"
-   "subtype … is …":
-    prefix: "sub"
-    body: "subtype $1 is $0"
   "use …;":
     prefix: "u"
     body: "use $1;"
@@ -116,16 +111,11 @@
       end loop;
     '''
   "with …; use …;":
-    prefix: "wi"
+    prefix: "wu"
     body: '''
       with ${1}; use $1;
       $0
     '''
   "with …;":
-    prefix: "with"
+    prefix: "w"
     body: "with $1;"
-  "package ... renames ...":
-   prefix: "ren"
-   body: '''
-     package $1 renames $2 ;
-   '''
