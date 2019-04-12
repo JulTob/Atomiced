@@ -1,0 +1,154 @@
+comment: "Ada -- chris@cjack.com. Feel free to modify, distribute, be happy. Share and enjoy."
+fileTypes: [
+  "ada"
+  "adb"
+  "ads"
+]
+name: "Ada"
+patterns: [
+  {
+    captures:
+      "1":
+        name: "storage.type.function.ada"
+      "2":
+        name: "entity.name.function.ada"
+    match: "\\b(?i:(function|procedure))\\b\\s+(\\w+(\\.\\w+)?|\"(?:\\+|-|=|\\*|/)\")"
+    name: "meta.function.ada"
+  }
+  {
+    captures:
+      "1":
+        name: "storage.type.package.ada"
+      "2":
+        name: "keyword.other.body.ada"
+      "3":
+        name: "entity.name.type.package.ada"
+    match: "\\b(?i:(package)(?:\\b\\s+(body))?)\\b\\s+(\\w+(\\.\\w+)*|\"(?:\\+|-|=|\\*|/)\")"
+    name: "meta.function.ada"
+  }
+  {
+    captures:
+      "1":
+        name: "storage.type.function.ada"
+      "2":
+        name: "entity.name.function.ada"
+    match: "\\b(?i:(end))\\b\\s+(\\w+(\\.\\w+)*|\"(\\+|-|=|\\*|/)\")\\s?;"
+    name: "meta.function.ada"
+  }
+  {
+    captures:
+      "1":
+        name: "keyword.control.import.ada"
+      "2":
+        name: "string.unquoted.import.ada"
+    match: "(^|[\\r\\n])((?i:((limited[ \\t]*)?(private[ \\t]*)?with))[ \\t]+(\\w+(\\.\\w+)*);[ \\t]*)+"
+    name: "meta.function.ada"
+  }
+  {
+    match: "\\b(?i:(begin|end|package|body))\\b"
+    name: "keyword.control.ada"
+  }
+  {
+    match: "\\b(?i:(type|range|array|delta|first|last|aliased|declare|digits|constant|generic|limited|private|record|protected|renames|subtype|abstract))\\b"
+    name: "keyword.types.ada"
+  }
+  {
+    match: "\\b(?i:(all|and|at|in|is|not|of|or|out|some|xor))\\b"
+    name: "keyword.logic.ada"
+  }
+  {
+    match: "\\b(?i:(do|else|elsif|case|for|goto|if|loop|others|reverse|accept|when|while|then|select|loop))\\b"
+    name: "keyword.control_flow.ada"
+  }
+  {
+    match: "\\b(?i:(access|new|use|with))\\b"
+    name: "keyword.accessess.ada"
+  }
+  {
+    match: ':'
+    name: "symbols.assignation.ada"
+  }
+  {
+    match: "\\b(?i:(abort|exception|exit|null|raise|terminate))\\b"
+    name: "keyword.exceptional.ada"
+  }
+  {
+    match: ';'
+    name: "symbols.terminator.ada"
+  }
+  {
+    match: "(?:=|<|>)"
+    name: "symbols.equals.ada"
+  }
+  {
+    match: "(?:\\+|\\*|/)"
+    name: "symbols.maths.ada"
+  }
+  {
+    match: "(?:&)"
+    name: "symbols.ampersand.ada"
+  }
+  {
+    match: "\\b(?i:(function|interface|procedure|return))\\b"
+    name: "keyword.processes.ada"
+  }
+  {
+    match: "\\b(?i:(delay|synchronized|task|requeue|until))\\b"
+    name: "keyword.timely.ada"
+  }
+  {
+    match: "\\b(?i:(abs|entry|mod|overriding|pragma|rem|separate|tagged))\\b"
+    name: "keyword.other.ada"
+  }
+  {
+    match: "\\b(?i:([0-9](_?[0-9])*((#[0-9a-f](_?[0-9a-f])*#((e(\\+|-)?[0-9](_?[0-9])*\\b)|\\B))|((\\.[0-9](_?[0-9])*)?(e(\\+|-)?[0-9](_?[0-9])*)?\\b))))"
+    name: "constant.numeric.ada"
+  }
+  {
+    match: "\\b(?i:(Integer|Positive|Natural|Float|Long_Float|Long_Long_Float))\\b"
+    name: "keyword.numeric.ada"
+  }
+  {
+    match: "\\b(?i:(String|Character|Wide_String|Wide_Character|Wide_Wide_String|Wide_Wide_Character))\\b"
+    name: "keyword.string.ada"
+  }
+  {
+    match: "\\b(?i:(Put|Put_Line|New_Line|Get|Get_Line))\\b"
+    name: "keyword.inout.ada"
+  }
+  {
+    begin: "\""
+    beginCaptures:
+      "0":
+        name: "punctuation.definition.string.begin.ada"
+    end: "\""
+    endCaptures:
+      "0":
+        name: "punctuation.definition.string.end.ada"
+    name: "string.quoted.double.ada"
+    patterns: [
+      {
+        match: "\\n"
+        name: "invalid.illegal.lf-in-string.ada"
+      }
+    ]
+  }
+  {
+    begin: "(^[ \\t]+)?(?=--)"
+    beginCaptures:
+      "1":
+        name: "punctuation.whitespace.comment.leading.ada"
+    end: "(?!\\G)"
+    patterns: [
+      {
+        begin: "--"
+        beginCaptures:
+          "0":
+            name: "punctuation.definition.comment.ada"
+        end: "\\n"
+        name: "comment.line.double-dash.ada"
+      }
+    ]
+  }
+]
+scopeName: "source.ada"
