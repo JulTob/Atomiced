@@ -1,0 +1,398 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+
+
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+
+// style the background color of the tree view
+.tree-view {
+   background-color: hsl( 249, 100%, 1%);
+   font-family: "CatV 6x12 9";
+
+}
+
+// style the background and foreground colors on the atom-text-editor-element itself
+atom-text-editor {
+   color: Silver;
+   background-color: hsl( 250, 60%, 3%);
+}
+
+// style UI elements inside atom-text-editor
+atom-text-editor .cursor {
+   border-color: hsl( 251, 90%, 40%);
+
+}
+atom-text-editor .cursor-line {
+   font-weight: bolder;
+   padding-top: 9px;
+   padding-bottom: 9px;}
+
+
+atom-text-editor .line  {
+   color:Silver;
+   padding: 1px;
+   padding-top: 6px;
+   padding-bottom: 7px;
+   line-height: 17px;
+}
+
+
+atom-text-editor .gutter .line-number {
+    background-color: hsl( 250, 90%, 2%);
+    padding: 1px;
+    padding-top: 6px;
+    padding-bottom: 7px;
+    line-height: 17px;
+    font-size: 13px;
+}
+
+
+
+.syntax--ada {
+  font-family: "Liberation Mono";
+}
+
+.syntax--keyword {
+  color: hsl( 200, 90%, 60%);
+  //font-style: italic;
+  font-family: "Inconsolata-g";
+
+}
+
+
+.syntax--storage {
+  color: hsl( 230, 90%, 70%);
+  font-style: italic;
+  font-family: "Bitstream Vera Sans Mono";
+
+}
+
+.syntax--type{
+    color:  hsl( 250, 90%, 70%);
+    font-style: italic;
+    font-family: "B612 Mono";
+
+}
+
+.syntax--package {
+  color: hsl( 200, 90%, 70%);
+  font-style: italic;
+  font-family: "Bitstream Vera Sans Mono";
+
+}
+
+.syntax--keyword.syntax--control {
+  color:  hsl( 200, 90%, 70%);
+  font-family: "B612 Mono";
+
+}
+
+.syntax--function {
+  color: hsl( 290, 50%, 60%);
+  font-style: oblique;
+    font-family: "B612 Mono";
+}
+
+
+.syntax--symbols {
+  color: hsl( 50, 100%, 80%);
+  font-style: normal;
+}
+
+.syntax--terminator {
+  color: hsl( 40, 100%, 80%);
+  font-style: normal;
+  font-family: "Bitstream Vera Sans Mono";
+}
+
+.syntax--equals {
+  color: hsl( 200, 90%, 75%);
+  font-style: normal;
+}
+.syntax--assignation {
+  color: hsl( 205, 100%, 78%);
+  font-style: normal;
+}
+
+
+
+
+
+.syntax--string {
+    color:  hsl( 120, 70%, 60%);
+    font-style: normal;
+    font-weight: lighter;
+    font-family: "League";
+}
+
+.syntax--import {
+    color:  hsl( 350, 100%, 65%);
+    font-style: normal;
+    font-family: "League";
+}
+
+.syntax--comment {
+  color: HSL(51, 40%, 45%);
+  font-style: normal;
+  font-family: "Anka/Coder";
+    font-size: 90%;
+}
+.syntax--punctuation.syntax--definition.syntax--comment {
+  color: HSL(51, 95%, 50%);
+  font-family: "Anka/Coder";
+
+}
+
+.syntax--variables {
+    color:  hsl( 0, 50%, 60%);
+}
+
+
+.syntax--control_flow {
+  color: hsl( 220, 99%, 69%);
+  font-family: "Aurulent Sans Mono"
+
+}
+
+
+
+.syntax--numeric {
+  color: hsl(  0, 85%, 70%);
+  //font-weight: bolder;
+  font-family: "Roboto Mono";
+}
+.syntax--constant.syntax--numeric {
+  color: hsl(  0, 85%, 68%);
+  font-weight: bolder;
+  font-family: "Roboto Mono Medium";
+}
+
+.syntax--maths {
+  color: hsl(  300, 89%, 60%);
+  font-family: "Luxi Mono";
+}
+
+.syntax--ampersand {
+  color: hsl(  300, 90%, 55%);
+  font-family: "Luxi Mono";
+}
+
+.syntax--exceptional{
+  color: hsl( 200, 100%, 80%);
+  font-style: normal;
+  font-family: "Luxi Mono";
+
+}
+
+
+.syntax--logic{
+  color: hsl( -60, 90%, 69%);
+  font-family: "Luxi Mono";
+
+}
+.syntax--entity {
+   color:  hsl( 200, 100%, 70%);
+   font-style: normal;
+   font-family: "Aurulent Sans Mono";// "Space Mono";
+
+}
+
+
+.syntax--name{
+  color: HSL(200, 95%, 100%);
+  font-family: "Luxi Mono";
+}
+
+.syntax--accessess{
+  color: hsl(320, 90%, 72%);
+  font-family: "Aurulent Sans Mono";
+
+}
+
+.syntax--inout{
+    color:  hsl( 340, 80%, 70%);
+    font-style: normal;
+    font-family: "Bitstream Vera Sans Mono";
+}
+
+
+.syntax--types{
+  color: hsl( 212, 90%, 60%);
+  font-family: "Source Code Pro Medium";
+
+}
+.syntax--processes{
+  color: hsl( 180, 50%, 60%);
+  font-weight: lighter;
+   font-family: "Inconsolata-g";
+
+}
+
+.syntax--entity.syntax--name.syntax--type {
+  color:  hsl( 350, 90%, 60%);
+  font-style: oblique;
+}
+.syntax--entity.syntax--name.syntax--function {
+    color:  hsl( 200, 100%, 70%);
+}
+
+.syntax--bracket {
+    color:  hsl( 250, 100%, 80%);
+    font-style: italic;
+    font-family: "Libertinus Mono";
+}
+atom-text-editor .bracket-matcher {
+    color:  hsl( 250, 100%, 80%);
+    font-style: italic;
+    font-family: "Libertinus Mono";
+}
+/* Fonts:
+
+//Normal
+"Aurulent Sans Mono"
+"Luxi Mono"
+"Source Code Pro Medium"
+"Bitstream Vera Sans Mono"
+"B612 Mono"
+"Roboto Mono"
+"Office Code Pro"
+"Roboto Mono Light"
+"Roboto Mono Medium"
+"Roboto Mono Thin"
+"Ubuntu Mono"
+"Ubuntu Mono - Bront"
+"Space Mono"
+
+//Prety Typewritter
+"B612 Mono"
+"League"
+"Liberation Mono"
+"Inconsolata-g"
+"Libertinus Mono"
+"Code New Roman"
+"Plex Mono"
+"Space Mono"
+
+
+//Robotic
+"APL385 Unicode"
+"Anka/Coder"
+"Share Tech Mono"
+"Terminus"
+"Consolamono"
+"Ubuntu Mono - Bront"
+"agave"
+"Bedstead"
+"CamingoCode"
+"Press Start 2P"
+"Profont"
+"Source Code Pro"
+"CatV 6x12 9"
+
+//Nopes
+"SK Modernist"
+"Fantasque Sans Mono"
+"Anonymous Pro"
+"Average Mono"
+"APL2741"
+"Nova Mono"
+*/
+
+/*
+.syntax--bracket{
+  color: HSL(220, 90%, 80%);
+  //font-weight: bold;
+  font-size: 1.05em;
+  font-style: oblique;
+  letter-spacing:  0.4em;
+  font-family: "Liberation Mono";
+}
+
+.syntax--end{
+  font-size: 100%;
+
+}
+
+
+.syntax--source.syntax--cpp .syntax--keyword.syntax--operator{
+  color: HSL(280, 95%, 60%);
+   font-style: normal;
+   font-size: 100%;
+  // font-weight: bold;
+
+}
+.syntax--json{
+  font-size: 100%;
+}
+.syntax--CoffeeScript{
+  font-size: 100%;
+}
+
+/*
+.syntax--method{
+  color: HSL(200, 70%, 75%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.syntax--timely{
+  color: hsl( 300, 90%, 60%);
+  font-family: "Ubuntu Mono - Bront";
+}
+
+
+
+.syntax--closepar{
+  color: HSL(220, 85%, 80%);
+  //font-weight: bold;
+  font-size: 1.04em;
+  font-style: oblique;
+  letter-spacing:  0.4em
+}
+
+.syntax--openpar{
+  color: HSL(220, 85%, 80%);
+  //font-weight: bold;
+  font-size: 1.11em;
+  font-style: oblique;
+  letter-spacing:  0.4em;
+
+
+}
+
+
+
+
+.syntax--xml{
+  font-size: 100%;
+}
+
+
+
+
+.syntax--entity{
+}
+//*/
